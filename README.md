@@ -1,4 +1,4 @@
 Staffing API
 ============
 
-!(docs/domain.png)
+![Domain](docs/domain.png)
