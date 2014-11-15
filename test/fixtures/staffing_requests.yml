@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  percentage: 1
+  start_date: 2014-11-12 08:30:47
+  end_date: 2014-11-12 08:30:47
+  status: 1
+  title_id: 
+  project_id: 
+
+two:
+  percentage: 1
+  start_date: 2014-11-12 08:30:47
+  end_date: 2014-11-12 08:30:47
+  status: 1
+  title_id: 
+  project_id: 
