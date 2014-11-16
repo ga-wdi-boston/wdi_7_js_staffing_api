@@ -24,9 +24,6 @@ default: &default
 development:
   <<: *default
   database: staffing_api_development
-
-  username: postgres
-  password: sapient
   host: localhost
   port: 5432
 
@@ -63,9 +60,6 @@ development:
 test:
   <<: *default
   database: staffing_api_test
-
-  username: postgres
-  password: sapient
   host: localhost
   port: 5432
 
@@ -91,5 +85,3 @@ test:
 production:
   <<: *default
   database: staffing_api_production
-  username: staffing_api
-  password: <%= ENV['STAFFING_API_DATABASE_PASSWORD'] %>

@@ -49,7 +49,7 @@ class SkillsController < ApplicationController
   end
 
   private
-    
+
     def skill_params
       params.require(:skill).permit(:name, :users)
     end

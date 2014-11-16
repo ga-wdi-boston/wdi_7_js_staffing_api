@@ -4,7 +4,7 @@ class CreateStaffingRequests < ActiveRecord::Migration
       t.integer :percentage
       t.datetime :start_date
       t.datetime :end_date
-      t.integer :status
+      t.integer :status, null: false, default: 0 # Defaults to 'open'
       t.belongs_to :title, index: true
       t.belongs_to :project, index: true
 
