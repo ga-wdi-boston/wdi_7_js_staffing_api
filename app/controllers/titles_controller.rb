@@ -49,7 +49,7 @@ class TitlesController < ApplicationController
   end
 
   private
-    
+
     def title_params
       params.require(:title).permit(:name, :staffing_requests)
     end
