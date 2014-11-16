@@ -49,7 +49,7 @@ class StaffingRequestsController < ApplicationController
   end
 
   private
-    
+
     def staffing_request_params
       params.require(:staffing_request).permit(:percentage, :start_date, :end_date, :status, :title_id, :project_id)
     end
