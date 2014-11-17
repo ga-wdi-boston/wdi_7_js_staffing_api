@@ -3,7 +3,7 @@ class SkillsController < ApplicationController
   # GET /skills.json
   def index
     @skills = Skill.all
-
+    
     render json: @skills
   end
 
