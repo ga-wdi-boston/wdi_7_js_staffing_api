@@ -29,13 +29,23 @@ class SkillsController < ApplicationController
 
   # PATCH/PUT /skills/1
   # PATCH/PUT /skills/1.json
+  # PATCH/PUT /users/1/skills/1
+  # PATCH/PUT /users/1/skills/1.json
   def update
     @skill = Skill.find(params[:id])
 
-    if @skill.update(skill_params)
+    if params[:user_id]
+      @user = User.find(params[:user_id])
+
+      @user.skills << @skill
+      
       head :no_content
     else
-      render json: @skill.errors, status: :unprocessable_entity
+      if @skill.update(skill_params)
+        head :no_content
+      else
+        render json: @skill.errors, status: :unprocessable_entity
+      end
     end
   end
 
@@ -51,6 +61,6 @@ class SkillsController < ApplicationController
   private
 
     def skill_params
-      params.require(:skill).permit(:name)
+      params.require(:skill).permit(:name, :user_id)
     end
 end
