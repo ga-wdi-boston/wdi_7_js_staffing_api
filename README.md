@@ -1,6 +1,6 @@
 # Staffing API
 
-This API goes with the [Angular.js exercises found here](https://github.com/ga-wdi-boston/wdi_7_js_angular). The basic idea is that a company would use this to allocate developers to projects. A admin user would open a staffing request when a project has a need, and then once the staffing team finds somebody, they allocate that user to the project by way of the staffing request.
+This API goes with the [Angular.js exercises found here](https://github.com/ga-wdi-boston/wdi_7_js_angular). The basic idea is that a company would use this to allocate developers to projects. An admin user would open a staffing request when a project has a need, and then once the staffing team finds somebody, they would allocate that user to the project by way of the staffing request. Users have skills and a title that are used to match them up to staffing requests. Users can be fully or partially allocated to a project and can work on multiple projects at once.
 
 ![Domain](docs/domain.png)
 
