@@ -51,6 +51,6 @@ class AllocationsController < ApplicationController
   private
 
     def allocation_params
-      params.require(:allocation).permit(:percentage, :start_date, :end_date, :user_id, :project_id)
+      params.require(:allocation).permit(:user_id, :staffing_request_id)
     end
 end
