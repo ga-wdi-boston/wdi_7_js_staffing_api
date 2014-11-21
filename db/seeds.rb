@@ -15,8 +15,8 @@ titles = Title.create([
 ])
 
 users = User.create([
-	{ first_name: 'Dan', last_name: 'Johnson', role: 1, title: Title.find_by_name('manager') },
-	{ first_name: 'David', last_name: 'Thomas', role: 1, title: Title.find_by_name('senior associate') }
+	{ first_name: 'Dan', last_name: 'Johnson', role: 1, title: Title.find_by_name('manager'), password_digest: '$2a$10$sKRAY9uoRn2kjo73pmiJ/Oe9FvvUF1banbmEN4z6CMRSyvr6CNRmq', token: '46f83a3f8c04c5ae39eb2276b474ceab', email: 'dan@test.com' },
+	{ first_name: 'David', last_name: 'Thomas', role: 1, title: Title.find_by_name('senior associate'), password_digest: '$2a$10$AKSi4TZ5AEP867jQYWek..WndQ75Px9F8dtxe6kppKZQlO.IWgJ8u', token: '8071034926c6651e661859be9475cb04', email: 'david@test.com' }
 ])
 
 skills = Skill.create([

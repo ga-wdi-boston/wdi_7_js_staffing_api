@@ -5,6 +5,7 @@ gem 'rails-api'
 gem 'rails_12factor', group: :production
 gem 'pg'
 gem 'rack-cors', require: 'rack/cors'
+gem 'bcrypt'
 
 group :development do
   gem 'spring'

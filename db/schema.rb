@@ -69,12 +69,15 @@ ActiveRecord::Schema.define(version: 20141112145150) do
   end
 
   create_table "users", force: true do |t|
-    t.string   "first_name",             null: false
-    t.string   "last_name",              null: false
-    t.integer  "role",       default: 1, null: false
+    t.string   "first_name",                  null: false
+    t.string   "last_name",                   null: false
+    t.integer  "role",            default: 1, null: false
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "token"
     t.integer  "title_id"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   add_index "users", ["title_id"], name: "index_users_on_title_id", using: :btree

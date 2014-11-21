@@ -1,4 +1,6 @@
 class SkillsController < ApplicationController
+  before_filter :authenticate
+
   # GET /skills
   # GET /skills.json
   def index

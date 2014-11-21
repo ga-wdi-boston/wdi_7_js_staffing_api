@@ -11,4 +11,14 @@ class User < ActiveRecord::Base
   # user.role => "employee"
   # user.employee? => true
   enum role: [:admin, :employee]
+
+  has_secure_password
+
+  before_create :generate_token
+
+  def generate_token
+    begin
+      self.token = SecureRandom.hex
+    end while self.class.exists?(token: token)
+  end
 end
