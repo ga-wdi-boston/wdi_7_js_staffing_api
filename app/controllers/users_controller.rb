@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # POST /login
   def login
-    user = User.find_by_email(params[:email])
+    user = User.find_by(email: params[:email])
 
     if user && user.authenticate(params[:password])
       render json: {"token" => user.token}
