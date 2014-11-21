@@ -10,6 +10,11 @@ class UsersController < ApplicationController
     end
   end
 
+  # GET /logout
+  def logout
+    head :ok
+  end
+
   # GET /users
   # GET /users.json
   def index
