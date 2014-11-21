@@ -46,4 +46,6 @@ staffing_requests GET    /staffing_requests(.:format)         staffing_requests#
                   PATCH  /titles/:id(.:format)                titles#update
                   PUT    /titles/:id(.:format)                titles#update
                   DELETE /titles/:id(.:format)                titles#destroy
+            login POST   /login(.:format)                     users#login
+           logout GET    /logout(.:format)                    users#logout
 ```

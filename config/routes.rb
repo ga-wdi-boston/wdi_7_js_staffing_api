@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   end
 
   resources :titles, except: [:new, :edit]
-
+  
   post '/login', to: 'users#login'
   get '/logout', to: 'users#logout'
 end
