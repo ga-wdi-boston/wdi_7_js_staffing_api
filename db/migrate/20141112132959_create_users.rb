@@ -6,7 +6,7 @@ class CreateUsers < ActiveRecord::Migration
       t.integer :role, null: false, default: 1 # Defaults to employee role
       t.string :email
       t.string :password_digest
-			t.string :token
+      t.string :token
       t.belongs_to :title, index: true
 
       t.timestamps null: false
