@@ -14,9 +14,17 @@ titles = Title.create([
 	{ name: 'director' }
 ])
 
+# curl -d "user[first_name]=Dan&user[last_name]=Johnson&user[password]=test&user[password_confirmation]=test" -X POST localhost:3000/users
+
+# token - d4b6db6199e646ad984d96db25ddef61
+
+# curl -d "user[first_name]=David&user[last_name]=Thomas&user[password]=test&user[password_confirmation]=test" -X POST localhost:3000/users
+
+# token - 0ddaab06d641407f8724673c7fdcddfd
+
 users = User.create([
-	{ first_name: 'Dan', last_name: 'Johnson', role: 1, title: Title.find_by_name('manager'), password_digest: '$2a$10$sKRAY9uoRn2kjo73pmiJ/Oe9FvvUF1banbmEN4z6CMRSyvr6CNRmq', token: '46f83a3f8c04c5ae39eb2276b474ceab', email: 'dan@test.com' },
-	{ first_name: 'David', last_name: 'Thomas', role: 1, title: Title.find_by_name('senior associate'), password_digest: '$2a$10$AKSi4TZ5AEP867jQYWek..WndQ75Px9F8dtxe6kppKZQlO.IWgJ8u', token: '8071034926c6651e661859be9475cb04', email: 'david@test.com' }
+	{ first_name: 'Dan', last_name: 'Johnson', role: 1, title: Title.find_by_name('manager'), password_digest: '$2a$10$5M0fkXWcq1Z/x8F.vjfseOc7AlmlmqejHiDCU/uHyh9YxLCDoB4nS', token: 'd4b6db6199e646ad984d96db25ddef61', email: 'dan@test.com' },
+	{ first_name: 'David', last_name: 'Thomas', role: 1, title: Title.find_by_name('senior associate'), password_digest: '$2a$10$DtmZhaCFk64vCq2UiuEev.ZpAEcZP4216UBDQozwv5Enyv/.DYnXa', token: '0ddaab06d641407f8724673c7fdcddfd', email: 'david@test.com' }
 ])
 
 skills = Skill.create([
