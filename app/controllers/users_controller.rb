@@ -4,7 +4,7 @@ class UsersController < ApplicationController
     user = User.find_by_email(params[:email])
 
     if user && user.authenticate(params[:password])
-      render json: user.token
+      render json: {"token" => user.token}
     else
       head :unauthorized
     end
